@@ -7,7 +7,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.49.0"
+      version = "5.1.0"
     }
   }
 }
@@ -18,7 +18,7 @@ provider "aws" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.18.1"
+  version = "5.0.0"
 
   name = var.vpc_name
   cidr = var.vpc_cidr
@@ -53,7 +53,7 @@ module "ec2_instances" {
 module "website_s3_bucket" {
   source = "./modules/aws-s3-static-website-bucket"
 
-  bucket_name = "robin-test-dec-17-2019"
+  bucket_name = "larry-test-jun-5-2023"
 
   tags = {
     Terraform   = "true"
